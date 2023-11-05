@@ -1,14 +1,17 @@
 package com.example.loginpage;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
+    private Button cancelButton;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    public void setCancelButton(ActionEvent e) {
+        Stage stage =(Stage) cancelButton.getScene().getWindow();
     }
+
 }
